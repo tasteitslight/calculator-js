@@ -1,0 +1,157 @@
+
+/* Hide HTML5 Up and Down arrows. */
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.calc__input {
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 40px;
+}
+
+.calc__input h1 {
+  font-size:24px;
+  padding-bottom: 20px;
+}
+
+.calc__form__input__div{
+  display: inline-block;
+  padding-top: 8px;
+  padding-left:5px;
+  width: 30%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  font-size: 16px;
+}
+
+.calc__form__input {
+  width: 90%;
+  border: none;
+  font-size:16px;
+}
+
+.calc__submit {
+  width: 30%;
+  height:45px;  
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width:214px;
+  padding-left: 10px;
+  font-size:16px;
+  background-color: #2d476e;
+  color: white;
+}
+
+.calc__submit:hover {
+  background-color: #20CE88;
+}
+
+.calc__table {
+  min-width: 750px;
+  width:95%;
+  max-width:900px;
+  margin: 0 auto;
+  overflow-x: scroll;
+}
+
+.calc__table {
+  width:100%;
+  table-layout: fixed;
+  border-collapse: collapse; 
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  font-size: .9em;
+}
+
+.calc__table td {
+  color: #000;
+}
+
+.calc__col--name {
+  width:40%;
+}
+
+.calc__col--data {
+  width:15%;
+  min-width: 200px;
+  color: white;
+  font-size: .9em;
+  padding: 10px;
+  background-color: #A93831;
+  border-right: 1px solid #cccccc;
+}
+
+.calc__col--data.green {
+  background-color: #08306A;
+}
+
+.calc__table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calc__table th {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calc__table tbody th {
+  text-align: right;
+  padding-right: 5px;
+  color: #000;
+}
+
+.calc__table tbody td {
+  text-align: right;
+  padding-right: 5px;
+  border-right: 1px solid #ddd;
+}
+
+.calc__table tr {
+  height: 34px; 
+  margin-bottom:10px;
+}
+
+.td__subtitle {
+  font-style: italic;
+  font-weight: 300;
+  font-size: .9em;
+}
+
+.row--highlight {
+  background-color: #f2f2f2;
+  border-top: 1px solid #bbb;
+}
+
+.row--profit {
+  background-color: #f2f2f2;
+  border: 2px dashed #27B0F0;
+}
+
+.bold--no {
+  font-weight: 300;  
+}
+
+.data--strong {
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.spacer td {
+  height:1px;
+}
+
+.bottom-spacing th {
+  border-spacing:10px;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+
+    <script src="calculator.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+  </head>
+  <body>
+    <div class="calc__container">
+
+        <div class="calc__input">
+          <h1>
+            After-Tax Net Profit Investment Comparison
+          </h1>
+          <form id="calc__form" onsubmit="return update();">
+            <label for="initialGain">
+              Enter amount:
+            </label>
+            <div class="calc__form__input__div">
+              <span>$</span>
+              <input 
+                class="calc__form__input"
+                type="text"
+                id="initialGain"
+                placeholder="1,000,000"
+                value=""
+              />
+            </div>
+            <input
+            class="calc__submit"
+            type="submit"
+            value="Calculate" />
+          </form>
+        </div>
+
+      <div>
+        <table class="calc__table">
+          <!--<caption>After-Tax Net Profit Investment Comparison</caption>-->
+          <thead>
+            <tr>
+              <th class="calc__col--name"></th>
+              <th class="calc__col--data" scope="col">Taxable Investment<br/><span class="td__subtitle">(Long Term Gain)</span></td>
+              <th class="calc__col--data green" scope="col">AAAmerican<br/>Opportunity Fund</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Capital Gain</th>
+              <td class="capGain">$1,000,000</td>
+              <td class="capGain">$1,000,000</td>
+            </tr>
+            <tr>
+              <th scope="row">Top Federal Tax Paid on Original Gain<br/><span class="td__subtitle">23.8%</span></th>
+              <td id="initialFedTax">(238,000)</td>
+              <td id="rLong">-</td>
+            </tr>
+            <tr class="row--highlight">
+              <th scope="row">Capital Available for a "New Investment" in 2019</th>
+              <td id="capAvail" class="data--strong">$762,000</td>
+              <td class="capGain data--strong">$1,000,000</td>
+            </tr>    
+            <tr>
+              <th scope="row"></th>
+              <td></td>
+              <td></td>
+            </tr>  
+            <tr class="bottom-spacing">
+              <th scope="row">Value of New Investment after 10 years<br/><span class="td__subtitle">9% Simple</span></th>
+              <td id="newValue" class="data--strong">$1,447,800</td>
+              <td id="newValueB" class="data--strong">$1,900,000</td>
+            </tr>
+            <tr>
+              <th scope="row">Top Federal Tax on 85% of Original Gain due 2027<br/><span class="td__subtitle">23.8%</span></th>
+              <td class="zero">(0)</td>
+              <td id="tax85">(202,300)</td>
+            </tr>
+            <tr>
+              <th scope="row">Top Federal Tax on Disposition of New Investment in 2029<br/><span class="td__subtitle">23.8%</span></th>
+              <td id="tax2029">(163,220)</td>
+              <td class="zero">(0)</td>
+            </tr>
+            <tr class="row--highlight">
+              <th scope="row">After Tax Proceeds</th>
+              <td id="afterTax">$1,284,580</td>
+              <td id="afterTaxB">$1,697,700</td>
+            </tr>
+            <tr>
+              <th class="bold--no" scope="row">Less: Original Gain</th>
+              <td class="capGain__neg">(1,000,000)</td>
+              <td class="capGain__neg">(1,000,000)</td>
+            </tr>
+            <tr class="row--profit">
+              <th scope="row">Net Profit<br/><span class="td__subtitle">(After Federal Tax on Original Gain and New Investment)</span></th>
+              <td id="netProfit" class="data--strong">$284,580</td>
+              <td id="netProfitB" class="data--strong">$697,700</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <script>
+          let input = document.getElementById('initialGain');
+              input.addEventListener('keyup', function(){
+                let n = parseInt(this.value.replace(/\D/g,''),10);
+                if( n > 3 ) { input.value = n.toLocaleString(); }
+            }, false);
+    </script>
+  </body>
+</html>
